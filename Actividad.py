@@ -4,9 +4,9 @@
 from abc import ABC, abstractmethod
 import logging
 
-logging.basicConfig(filename='registro.log', level=logging.ERROR, 
-                    format='%(asctime)s - %(message)s')
-
+logging.basicConfig(
+    filename='registro.log', level=logging.INFO, format='%(asctime)s - %(message)s'
+)
 # Funcuion para las validaciones 
 class ErrorPersonalizado(Exception):
     pass
