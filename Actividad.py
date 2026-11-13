@@ -38,7 +38,7 @@ def main():
         cliente1 = Cliente(1, "Elier Lorenzo Estrella Rz", "1086925057")
         
         # Funcion que imprimir los datos del cliente
-        print(cliente1.mostrar_dato()) 
+        print(cliente1.mostrar_datos()) 
         
     except AttributeError as e:
         # Funcion que identifica si hay algun error llamando a los metodos
@@ -46,7 +46,7 @@ def main():
         logging.error("Fallo de atributo: {e}")
         
     except Exception as e:
-        # Funcion que notifica el error general 
+        # Funcion que notifica el error general.
         print("Error general: {e}")
         
     finally:
