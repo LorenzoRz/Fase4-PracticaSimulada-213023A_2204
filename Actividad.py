@@ -39,16 +39,18 @@ def main():
         
         # Funcion que imprimir los datos del cliente
         print(cliente1.mostrar_datos()) 
+        logging.info(f"Cliente creado exitosamente: {cliente1.mostrar_datos()}")    
         
     except AttributeError as e:
-        # Funcion que identifica si hay algun error llamando a los metodos
+        # Funcion que identifica si hay algun error llamando a los metodos.
         print(f"Error detectado en el codigo: {e}")
-        logging.error("Fallo de atributo: {e}")
+        logging.error(f"Fallo de atributo: {e}")
         
     except Exception as e:
         # Funcion que notifica el error general.
-        print("Error general: {e}")
-        
+        print(f"Error general: {e}")
+        logging.error(f"Error general: {e}")
+
     finally:
         print("Finalisando el primer avance del cliete.") 
 
