@@ -14,6 +14,8 @@ class ErrorPersonalizado(Exception):
 # Clase principal
 class Entidad(ABC):
     def __init__(self, id_entidad):
+        if id_entidad <= 0:
+            raise ErrorPersonalizado("El ID de la entidad debe ser un número positivo.")    
         self._id_entidad = id_entidad
         
     @abstractmethod
@@ -23,9 +25,14 @@ class Entidad(ABC):
 class Cliente(Entidad):
     def __init__(self, id_entidad, nombre, doc):
         super().__init__(id_entidad)
+        if not nombre or not doc:
+            raise ErrorPersonalizado("El nombre y el documento no pueden estar vacíos.")
         # Datos del Usuario
         self.__nombre = nombre
         self.__doc = doc
+    
+    def nombre(self):
+        return self.__nombre
         
     def mostrar_datos(self):
         return f"ID: {self._id_entidad} | Nombre: {self.__nombre} | CC: {self.__doc}"
