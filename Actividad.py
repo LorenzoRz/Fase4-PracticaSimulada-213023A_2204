@@ -30,12 +30,43 @@ class Cliente(Entidad):
         # Datos del Usuario
         self.__nombre = nombre
         self.__doc = doc
-    
+
+    @property
     def nombre(self):
         return self.__nombre
         
     def mostrar_datos(self):
         return f"ID: {self._id_entidad} | Nombre: {self.__nombre} | CC: {self.__doc}"
+
+class Servicio(Entidad):
+    def __init__(self, id_entidad, nombre, tarifa):
+        super().__init__(id_entidad)
+        if tarifa <= 0:
+            raise ErrorPersonalizado("La tarifa del servicio debe ser un número positivo.")
+        self.__nombre = nombre
+        self.__tarifa = tarifa
+        self.disponible = True  # Atributo para indicar si el servicio está disponible
+
+    @abstractmethod
+    def validar(self, duracion):
+        pass
+
+
+    @property
+    def nombre(self):
+        return self.__nombre
+
+    def calcular_costo(self, duracion, descuento=0, iva=False):
+        self.validar(duracion)
+        costo_base = (self.__tarifa * duracion) * (1-descuento)
+        return costo_base * (1.19) if iva else costo_base
+        
+        
+        
+    def mostrar_datos(self):
+        return f"ID: {self._id_entidad} | Servicio: {self.__nombre} | Tarifa: {self.__tarifa}"
+
+
 
 def main():
     print("Iniciando sitema") 
