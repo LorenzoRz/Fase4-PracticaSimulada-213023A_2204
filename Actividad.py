@@ -105,7 +105,7 @@ class Reserva(Entidad):
         try:
             self.total = self.servicio.calcular_costo(self.duracion, descuento, iva)
         except ErrorPersonalizado as e:
-            # Encadenamiento de excepciones
+            # Encadenamiento de excepciones.
             raise ErrorReserva("Error al procesar el costo de la reserva.") from e
         self.estado = "CONFIRMADA"
         self.servicio.disponible = False
@@ -119,7 +119,10 @@ class Reserva(Entidad):
 
 def main():
     print("Iniciando sitema") 
-    
+    clientes=[]
+    servicios=[]
+    reservas=[]
+
     try:
         #  Linea que crea un cliente de prueba
         cliente1 = Cliente(1, "Elier Lorenzo Estrella Rz", "1086925057")
