@@ -7,8 +7,13 @@ import logging
 logging.basicConfig(
     filename='registro.log', level=logging.INFO, format='%(asctime)s - %(message)s'
 )
+
+
 # Funcuion para las validaciones 
 class ErrorPersonalizado(Exception):
+    pass
+
+class ErrorReserva(ErrorPersonalizado):
     pass
 
 # Clase principal
@@ -43,30 +48,74 @@ class Servicio(Entidad):
         super().__init__(id_entidad)
         if tarifa <= 0:
             raise ErrorPersonalizado("La tarifa del servicio debe ser un número positivo.")
-        self.__nombre = nombre
-        self.__tarifa = tarifa
+        self._nombre = nombre
+        self._tarifa = tarifa
         self.disponible = True  # Atributo para indicar si el servicio está disponible
 
     @abstractmethod
     def validar(self, duracion):
         pass
 
-
     @property
     def nombre(self):
-        return self.__nombre
+        return self._nombre
 
     def calcular_costo(self, duracion, descuento=0, iva=False):
         self.validar(duracion)
-        costo_base = (self.__tarifa * duracion) * (1-descuento)
-        return costo_base * (1.19) if iva else costo_base
+        costo_base = (self._tarifa * duracion) * (1 - descuento)
+        return costo_base * 1.19 if iva else costo_base
         
-        
+class Sala(Servicio):
+    def validar(self, duracion):
+        if duracion < 1:
+            raise ErrorPersonalizado("La duración debe ser mínimo una hora.")
         
     def mostrar_datos(self):
-        return f"ID: {self._id_entidad} | Servicio: {self.__nombre} | Tarifa: {self.__tarifa}"
+        return f"Sala: {self._nombre} | Tarifa: ${self._tarifa}/h | Disponible: {self.disponible}"
 
+class Equipo(Servicio):
+    def validar(self, duracion):
+        if duracion < 1:
+            raise ErrorPersonalizado("El equipo se alquila mínimo 1 día.")
 
+    def mostrar_datos(self):
+        return f"Equipo: {self._nombre} | Tarifa: ${self._tarifa}/día | Disponible: {self.disponible}"
+
+class Asesoria(Servicio):
+    def validar(self, duracion):
+        if duracion < 2:
+            raise ErrorPersonalizado("La asesoría requiere mínimo 2 horas.")
+
+    def mostrar_datos(self):
+        return f"Asesoría: {self._nombre} | Tarifa: ${self._tarifa}/h | Disponible: {self.disponible}"
+
+# Clase Reserva que integra Cliente y Servicio
+class Reserva(Entidad):
+    def __init__(self, id_entidad, cliente, servicio, duracion):
+        super().__init__(id_entidad)
+        if not servicio.disponible:
+            raise ErrorReserva(f"El servicio '{servicio.nombre}' no está disponible.")
+        self.cliente = cliente
+        self.servicio = servicio
+        self.duracion = duracion
+        self.estado = "PENDIENTE"
+        self.total = 0
+
+    def confirmar(self, descuento=0, iva=False):
+        try:
+            self.total = self.servicio.calcular_costo(self.duracion, descuento, iva)
+        except ErrorPersonalizado as e:
+            # Encadenamiento de excepciones
+            raise ErrorReserva("Error al procesar el costo de la reserva.") from e
+        self.estado = "CONFIRMADA"
+        self.servicio.disponible = False
+
+    def cancelar(self):
+        self.estado = "CANCELADA"
+        self.servicio.disponible = True
+
+    def mostrar_datos(self):
+        return f"Reserva #{self._id_entidad} [{self.estado}] | {self.cliente.nombre} -> {self.servicio.nombre} | Total: ${self.total}"
 
 def main():
     print("Iniciando sitema") 
