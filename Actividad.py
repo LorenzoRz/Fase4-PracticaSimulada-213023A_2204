@@ -180,6 +180,24 @@ def main():
         print(f"Error al crear el servicio: {e}")
         logging.error(f"Error en la servicio: {e}")
 
+    try:
+        #  Linea que crea un cliente de prueba
+        cliente2 = Cliente(2, "Oscar Martinez Ortiz", "98195248")
+    except ErrorPersonalizado as e:
+        print(f"Error al crear el cliente: {e}")
+    else:
+        # Funcion que imprimir los datos del cliente
+        print(cliente2.mostrar_datos()) 
+        logging.info(f"Cliente creado exitosamente: {cliente2.mostrar_datos()}")
+
+
+    try:
+        # Linea que crea una reserva de prueba
+        reserva3 = Reserva(1, cliente2, equipo1, 0)  # Duración inválida para probar la validación
+
+    except (ErrorPersonalizado, ErrorReserva) as e:
+        print(f"Error al crear la reserva: {e} -> Motivo: {e.__cause__}")
+        logging.error(f"Error al crear la reserva: {e} | Causa: {e.__cause__}")
 
     try:
            # Linea que crea un servicio de prueba
@@ -188,7 +206,11 @@ def main():
            print(f"Error al crear el servicio: {e}")
            logging.error(f"Error en la servicio: {e}")
    
-   
+    try:
+        servicio_invalido = Sala(4, "Sala Inválida", -50)
+    except ErrorPersonalizado as e:
+        print(f"Error al crear servicio inválido: {e}")
+        logging.error(f"Servicio inválido rechazado: {e}")
 
     try:
         # Linea que crea una reserva de prueba
@@ -232,6 +254,16 @@ def main():
         print(f"Error en la reserva: {e}")
         logging.error(f"Error en la reserva: {e}")
 
+    try:
+        # Linea que cancela la reserva de prueba
+        reserva3.cancelar()
+        # Funcion que imprimir los datos de la reserva cancelada
+        print(reserva3.mostrar_datos())
+        logging.info(f"Reserva cancelada exitosamente: {reserva3.mostrar_datos()}")
+    except ErrorReserva as e:
+        # Funcion que notifica el error de la reserva.
+        print(f"Error en la reserva: {e}")
+        logging.error(f"Error en la reserva: {e}")  
 
     except Exception as e:
         # Funcion que notifica el error general.

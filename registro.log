@@ -90,3 +90,47 @@
 2026-11-20 13:22:26,857 - Reserva cancelada exitosamente: Reserva #1 [CANCELADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $321.3
 2026-11-20 13:22:26,857 - Error en la reserva: Error al procesar el costo de la reserva.
 2026-11-20 13:22:26,857 - Error en la reserva: Error al procesar el costo de la reserva.
+2026-11-20 13:25:34,039 - Cliente creado exitosamente: ID: 1 | Nombre: Elier Lorenzo Estrella Rz | CC: 1086925057
+2026-11-20 13:25:34,039 - Servicio creado exitosamente: Sala: Sala de Conferencias | Tarifa: $100/h | Disponible: True
+2026-11-20 13:25:34,040 - Reserva confirmada exitosamente: Reserva #1 [CONFIRMADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $321.3
+2026-11-20 13:25:34,040 - Reserva cancelada exitosamente: Reserva #1 [CANCELADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $321.3
+2026-11-20 13:25:34,040 - Error en la reserva: Error al procesar el costo de la reserva.
+2026-11-20 13:25:34,041 - Error en la reserva: Error al procesar el costo de la reserva.
+2026-11-20 13:25:51,000 - Cliente creado exitosamente: ID: 1 | Nombre: Elier Lorenzo Estrella Rz | CC: 1086925057
+2026-11-20 13:25:51,000 - Servicio creado exitosamente: Sala: Sala de Conferencias | Tarifa: $100/h | Disponible: True
+2026-11-20 13:25:51,000 - Reserva confirmada exitosamente: Reserva #1 [CONFIRMADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $321.3
+2026-11-20 13:25:51,000 - Reserva cancelada exitosamente: Reserva #1 [CANCELADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $321.3
+2026-11-20 13:25:51,000 - Error en la reserva: Error al procesar el costo de la reserva.
+2026-11-20 13:25:51,000 - Error en la reserva: Error al procesar el costo de la reserva.
+2026-11-20 13:32:51,734 - Cliente creado exitosamente: ID: 1 | Nombre: Elier Lorenzo Estrella Rz | CC: 1086925057
+2026-11-20 13:32:51,754 - Servicio creado exitosamente: Sala: Sala de Conferencias | Tarifa: $100/h | Disponible: True
+2026-11-20 13:32:51,755 - Reserva confirmada exitosamente: Reserva #1 [CONFIRMADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $321.3
+2026-11-20 13:32:51,756 - Reserva cancelada exitosamente: Reserva #1 [CANCELADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $321.3
+2026-11-20 13:32:51,756 - Servicio inválido rechazado: La tarifa del servicio debe ser un número positivo.
+2026-11-20 13:32:51,756 - Error en la reserva: Error al procesar el costo de la reserva.
+2026-11-20 13:32:51,758 - Error en la reserva: Error al procesar el costo de la reserva.
+2026-11-20 13:34:24,760 - Cliente creado exitosamente: ID: 1 | Nombre: Elier Lorenzo Estrella Rz | CC: 1086925057
+2026-11-20 13:34:24,760 - Servicio creado exitosamente: Sala: Sala de Conferencias | Tarifa: $100/h | Disponible: True
+2026-11-20 13:34:24,760 - Reserva confirmada exitosamente: Reserva #1 [CONFIRMADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $321.3
+2026-11-20 13:34:24,760 - Reserva cancelada exitosamente: Reserva #1 [CANCELADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $321.3
+2026-11-20 13:34:24,761 - Cliente creado exitosamente: ID: 2 | Nombre: Oscar Martinez Ortiz | CC: 98195248
+2026-11-20 13:34:24,761 - Servicio inválido rechazado: La tarifa del servicio debe ser un número positivo.
+2026-11-20 13:34:24,761 - Error en la reserva: Error al procesar el costo de la reserva.
+2026-11-20 13:34:24,761 - Error en la reserva: Error al procesar el costo de la reserva.
+2026-11-20 13:35:39,224 - Cliente creado exitosamente: ID: 1 | Nombre: Elier Lorenzo Estrella Rz | CC: 1086925057
+2026-11-20 13:35:39,299 - Servicio creado exitosamente: Sala: Sala de Conferencias | Tarifa: $100/h | Disponible: True
+2026-11-20 13:35:39,300 - Reserva confirmada exitosamente: Reserva #1 [CONFIRMADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $321.3
+2026-11-20 13:35:39,300 - Reserva cancelada exitosamente: Reserva #1 [CANCELADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $321.3
+2026-11-20 13:35:39,300 - Cliente creado exitosamente: ID: 2 | Nombre: Oscar Martinez Ortiz | CC: 98195248
+2026-11-20 13:35:39,300 - Servicio inválido rechazado: La tarifa del servicio debe ser un número positivo.
+2026-11-20 13:35:39,300 - Error en la reserva: Error al procesar el costo de la reserva.
+2026-11-20 13:35:39,301 - Error en la reserva: Error al procesar el costo de la reserva.
+2026-11-20 13:38:27,491 - Cliente creado exitosamente: ID: 1 | Nombre: Elier Lorenzo Estrella Rz | CC: 1086925057
+2026-11-20 13:38:27,491 - Servicio creado exitosamente: Sala: Sala de Conferencias | Tarifa: $100/h | Disponible: True
+2026-11-20 13:38:27,492 - Reserva confirmada exitosamente: Reserva #1 [CONFIRMADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $321.3
+2026-11-20 13:38:27,492 - Reserva cancelada exitosamente: Reserva #1 [CANCELADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $321.3
+2026-11-20 13:38:27,492 - Cliente creado exitosamente: ID: 2 | Nombre: Oscar Martinez Ortiz | CC: 98195248
+2026-11-20 13:38:27,492 - Servicio inválido rechazado: La tarifa del servicio debe ser un número positivo.
+2026-11-20 13:38:27,493 - Error en la reserva: Error al procesar el costo de la reserva.
+2026-11-20 13:38:27,493 - Error en la reserva: Error al procesar el costo de la reserva.
+2026-11-20 13:38:27,493 - Reserva cancelada exitosamente: Reserva #3 [CANCELADA] | Elier Lorenzo Estrella Rz -> Asesoría Legal | Total: $0
