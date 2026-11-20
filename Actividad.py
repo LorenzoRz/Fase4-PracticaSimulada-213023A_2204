@@ -126,23 +126,48 @@ def main():
     try:
         #  Linea que crea un cliente de prueba
         cliente1 = Cliente(1, "Elier Lorenzo Estrella Rz", "1086925057")
-        
+    except ErrorPersonalizado as e:
+        print(f"Error al crear el cliente: {e}")
+    else:
         # Funcion que imprimir los datos del cliente
         print(cliente1.mostrar_datos()) 
-
         logging.info(f"Cliente creado exitosamente: {cliente1.mostrar_datos()}")
-        
+
+    try:
+        # Linea que crea un servicio de prueba
+        sala1 = Sala(1, "Sala de Conferencias", 100)
+    except ErrorPersonalizado as e:
+        print(f"Error al crear el servicio: {e}")
+    else:
+        # Funcion que imprimir los datos del servicio
+        print(sala1.mostrar_datos()) 
+        logging.info(f"Servicio creado exitosamente: {sala1.mostrar_datos()}")  
+    try:
+        # Linea que crea una reserva de prueba
+        reserva1 = Reserva(1, cliente1, sala1, 3)
+ 
     except AttributeError as e:
         # Funcion que identifica si hay algun error llamando a los metodos.
         print(f"Error detectado en el codigo: {e}")
         logging.error(f"Fallo de atributo: {e}")
-        
-    except Exception as e:
+    
+try:
+        # Linea que confirma la reserva de prueba
+        reserva1.confirmar(descuento=0.1, iva=True)
+        # Funcion que imprimir los datos de la reserva
+        print(reserva1.mostrar_datos())
+        logging.info(f"Reserva confirmada exitosamente: {reserva1.mostrar_datos()}")
+except ErrorReserva as e:
+        # Funcion que notifica el error de la reserva.
+        print(f"Error en la reserva: {e}")
+        logging.error(f"Error en la reserva: {e}")      
+
+except Exception as e:
         # Funcion que notifica el error general.
         print(f"Error general: {e}")
         logging.error(f"Error general: {e}")
 
-    finally:
+finally:
             
         print("Finalisando el primer avance del cliete.") 
 

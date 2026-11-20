@@ -35,3 +35,8 @@
 2026-11-20 00:53:46,367 - Cliente creado exitosamente: ID: 1 | Nombre: Elier Lorenzo Estrella Rz | CC: 1086925057
 2026-11-20 12:28:07,802 - Cliente creado exitosamente: ID: 1 | Nombre: Elier Lorenzo Estrella Rz | CC: 1086925057
 2026-11-20 12:50:31,996 - Cliente creado exitosamente: ID: 1 | Nombre: Elier Lorenzo Estrella Rz | CC: 1086925057
+2026-11-20 12:53:46,660 - Cliente creado exitosamente: ID: 1 | Nombre: Elier Lorenzo Estrella Rz | CC: 1086925057
+2026-11-20 12:53:46,661 - Servicio creado exitosamente: Sala: Sala de Conferencias | Tarifa: $100/h | Disponible: True
+2026-11-20 12:58:15,655 - Error general: name 'reserva1' is not defined
+2026-11-20 12:58:15,656 - Cliente creado exitosamente: ID: 1 | Nombre: Elier Lorenzo Estrella Rz | CC: 1086925057
+2026-11-20 12:58:15,656 - Servicio creado exitosamente: Sala: Sala de Conferencias | Tarifa: $100/h | Disponible: True
