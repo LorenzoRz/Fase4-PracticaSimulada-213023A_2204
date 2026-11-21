@@ -124,7 +124,7 @@ def main():
     reservas=[]
 
     try:
-        #  Linea que crea un cliente de prueba
+        #  Creacion de un cliente de prueba
         cliente1 = Cliente(1, "Elier Lorenzo Estrella Rz", "1086925057")
     except ErrorPersonalizado as e:
         print(f"Error al crear el cliente: {e}")
@@ -133,15 +133,47 @@ def main():
         print(cliente1.mostrar_datos()) 
         logging.info(f"Cliente creado exitosamente: {cliente1.mostrar_datos()}")
 
+
+    try:
+        #  Creacion de un cliente de prueba
+        cliente2 = Cliente(2, "Oscar Martinez Ortiz", "98195248")
+    except ErrorPersonalizado as e:
+        print(f"Error al crear el cliente: {e}")
+    else:
+        # Funcion que imprimir los datos del cliente
+        print(cliente2.mostrar_datos()) 
+        logging.info(f"Cliente creado exitosamente: {cliente2.mostrar_datos()}")
+
+
+    try:
+        #  Creacion de un cliente erroneo prueba
+        cliente_erronero = Cliente(3, "Brenda", "")
+        clientes.append(cliente_erronero)
+    except ErrorPersonalizado as e:
+        print(f"Error al crear el cliente: {e}")
+        logging.error(f"Error en el cliente: {e}")
+
+
     try:
         # Linea que crea un servicio de prueba
-        sala1 = Sala(1, "Sala de Conferencias", 100)
+        sala1 = Sala(1, "Sala de Conferencias", 150000)
     except ErrorPersonalizado as e:
         print(f"Error al crear el servicio: {e}")
     else:
         # Funcion que imprimir los datos del servicio
         print(sala1.mostrar_datos()) 
         logging.info(f"Servicio creado exitosamente: {sala1.mostrar_datos()}")  
+    
+    try:
+        equipo1 = Equipo(2, "Televisor", 500000)
+        asesoria1 = Asesoria(3, "Asesoría Legal", 200000)
+        servicios.extend([equipo1, asesoria1])
+        print("5.",equipo1.mostrar_datos(),"|",asesoria1.mostrar_datos())
+        logging.info(f"Servicios creados exitosamente: {equipo1.mostrar_datos()} | {asesoria1.mostrar_datos()}")
+    except ErrorPersonalizado as e:
+        print(f"Error al crear los servicios: {e}")
+        logging.error(f"Error en los servicios: {e}")
+#asta aqui probar errorres
     try:
         # Linea que crea una reserva de prueba
         reserva1 = Reserva(1, cliente1, sala1, 3)
