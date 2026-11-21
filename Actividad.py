@@ -174,128 +174,46 @@ def main():
         print(f"Error al crear los servicios: {e}")
         logging.error(f"Error en los servicios: {e}")
 #asta aqui probar errorres
-    try:
-        # Linea que crea una reserva de prueba
-        reserva1 = Reserva(1, cliente1, sala1, 3)
- 
-    except AttributeError as e:
-        # Funcion que identifica si hay algun error llamando a los metodos.
-        print(f"Error detectado en el codigo: {e}")
-        logging.error(f"Fallo de atributo: {e}")
-    
-    try:
-        # Linea que confirma la reserva de prueba
-        reserva1.confirmar(descuento=0.1, iva=True)
-        # Funcion que imprimir los datos de la reserva
-        print(reserva1.mostrar_datos())
-        logging.info(f"Reserva confirmada exitosamente: {reserva1.mostrar_datos()}")
-    except ErrorReserva as e:
-        # Funcion que notifica el error de la reserva.
-        print(f"Error en la reserva: {e}")
-        logging.error(f"Error en la reserva: {e}")      
+
+
 
     try:
-        # Linea que cancela la reserva de prueba
-        reserva1.cancelar()
-        # Funcion que imprimir los datos de la reserva cancelada
-        print(reserva1.mostrar_datos())
-        logging.info(f"Reserva cancelada exitosamente: {reserva1.mostrar_datos()}") 
-    except ErrorReserva as e:
-        # Funcion que notifica el error de la reserva.
-        print(f"Error en la reserva: {e}")
-        logging.error(f"Error en la reserva: {e}")
-
-    try:
-        # Linea que crea un servicio de prueba
-        equipo1 = Equipo(2, "Proyector HD", 50)
+        # Servicio de prueba erroneo
+        servicio_invalido = Sala(4, "Sala Inválida", -50)
+        servicios.append(servicio_invalido)
     except ErrorPersonalizado as e:
         print(f"Error al crear el servicio: {e}")
-        logging.error(f"Error en la servicio: {e}")
-
-    try:
-        #  Linea que crea un cliente de prueba
-        cliente2 = Cliente(2, "Oscar Martinez Ortiz", "98195248")
-    except ErrorPersonalizado as e:
-        print(f"Error al crear el cliente: {e}")
-    else:
-        # Funcion que imprimir los datos del cliente
-        print(cliente2.mostrar_datos()) 
-        logging.info(f"Cliente creado exitosamente: {cliente2.mostrar_datos()}")
-
-
-    try:
-        # Linea que crea una reserva de prueba
-        reserva3 = Reserva(1, cliente2, equipo1, 0)  # Duración inválida para probar la validación
-
-    except (ErrorPersonalizado, ErrorReserva) as e:
-        print(f"Error al crear la reserva: {e} -> Motivo: {e.__cause__}")
-        logging.error(f"Error al crear la reserva: {e} | Causa: {e.__cause__}")
-
-    try:
-           # Linea que crea un servicio de prueba
-           equipo1 = Equipo(3, "Televisor", 50)
-    except ErrorPersonalizado as e:
-           print(f"Error al crear el servicio: {e}")
-           logging.error(f"Error en la servicio: {e}")
-   
-    try:
-        servicio_invalido = Sala(4, "Sala Inválida", -50)
-    except ErrorPersonalizado as e:
-        print(f"Error al crear servicio inválido: {e}")
-        logging.error(f"Servicio inválido rechazado: {e}")
-
-    try:
-        # Linea que crea una reserva de prueba
-        reserva2 = Reserva(2, cliente1, equipo1, 0)  # Duración inválida para probar la validación
-
-    except (ErrorPersonalizado, ErrorReserva) as e:
-        print(f"Error al crear la reserva: {e} -> Motivo: {e.__cause__}")
-        logging.error(f"Error al crear la reserva: {e} | Causa: {e.__cause__}")
+        logging.error(f"Error en el servicio: {e}")
 
     try:
         # Linea que confirma la reserva de prueba
-        reserva2.confirmar()
-        # Funcion que imprimir los datos de la reserva
-        print(reserva2.mostrar_datos())     
+       reserva1 = Reserva(1, cliente1, sala1, 3)
+       reserva1.confirmar(descuento=0.1, iva=True)
+       reservas.append(reserva1)
+       print(reserva1.mostrar_datos())
+       logging.info(f"Reserva confirmada exitosamente: {reserva1.mostrar_datos()}")
     except ErrorReserva as e:
-        # Funcion que notifica el error de la reserva.
-        print(f"Error en la reserva: {e}")
-        logging.error(f"Error en la reserva: {e}")  
-
+        print(f"Error al confirmar la reserva: {e}")
+        logging.error(f"Error en la reserva: {e}")
+    
     try:
-        # Linea que crea un servicio de prueba
-        asesoria1 = Asesoria(3, "Asesoría Legal", 200)
-    except ErrorPersonalizado as e:
-        print(f"Error al crear el servicio: {e}")   
-
-    try:
-        # Linea que crea una reserva de prueba
-        reserva3 = Reserva(3, cliente1, asesoria1, 1)  # Duración inválida para probar la validación    
-        print(reserva3.mostrar_datos())
-    except (ErrorPersonalizado, ErrorReserva) as e:
-        print(f"Error al crear la reserva: {e} -> Motivo: {e.__cause__}")
-        logging.error(f"Error al crear la reserva: {e} | Causa: {e.__cause__}") 
-
-    try:
-        # Linea que confirma la reserva de prueba
-        reserva3.confirmar()
-        # Funcion que imprimir los datos de la reserva
-        print(reserva3.mostrar_datos())
+        # Reserva de prueba erronea
+        reserva_invalida = Reserva(2, cliente2, sala1, 2)  # Intentando reservar una sala ya reservada
+        reserva_invalida.confirmar()
+        reservas.append(reserva_invalida)
     except ErrorReserva as e:
-        # Funcion que notifica el error de la reserva.
-        print(f"Error en la reserva: {e}")
+        print(f"Error al confirmar la reserva: {e}")
         logging.error(f"Error en la reserva: {e}")
 
     try:
-        # Linea que cancela la reserva de prueba
-        reserva3.cancelar()
-        # Funcion que imprimir los datos de la reserva cancelada
-        print(reserva3.mostrar_datos())
-        logging.info(f"Reserva cancelada exitosamente: {reserva3.mostrar_datos()}")
+        # Intentando crear una reserva con un servicio no disponible
+        reserva_invalida2 = Reserva(3, cliente2, equipo1, 0)
+        reserva_invalida2.confirmar()
+        reservas.append(reserva_invalida2)
     except ErrorReserva as e:
-        # Funcion que notifica el error de la reserva.
-        print(f"Error en la reserva: {e}")
-        logging.error(f"Error en la reserva: {e}")  
+        print(f"Error encadenamiento de reservas: {e}")
+        logging.error(f"Error en la reserva: {e}")
+
 
     except Exception as e:
         # Funcion que notifica el error general.
