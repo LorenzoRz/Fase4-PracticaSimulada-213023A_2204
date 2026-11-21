@@ -183,3 +183,30 @@
 2026-11-21 13:15:02,355 - Servicios creados exitosamente: Equipo: Televisor | Tarifa: $500000/día | Disponible: True | Asesoría: Asesoría Legal | Tarifa: $200000/h | Disponible: True
 2026-11-21 13:15:02,355 - Error en el servicio: La tarifa del servicio debe ser un número positivo.
 2026-11-21 13:15:02,355 - Reserva confirmada exitosamente: Reserva #1 [CONFIRMADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $481950.0
+2026-11-21 13:27:11,416 - Cliente creado exitosamente: ID: 1 | Nombre: Elier Lorenzo Estrella Rz | CC: 1086925057
+2026-11-21 13:27:11,416 - Cliente creado exitosamente: ID: 2 | Nombre: Oscar Martinez Ortiz | CC: 98195248
+2026-11-21 13:27:11,416 - Error en el cliente: El nombre y el documento no pueden estar vacíos.
+2026-11-21 13:27:11,416 - Servicio creado exitosamente: Sala: Sala de Conferencias | Tarifa: $150000/h | Disponible: True
+2026-11-21 13:27:11,416 - Servicios creados exitosamente: Equipo: Televisor | Tarifa: $500000/día | Disponible: True | Asesoría: Asesoría Legal | Tarifa: $200000/h | Disponible: True
+2026-11-21 13:27:11,416 - Error en el servicio: La tarifa del servicio debe ser un número positivo.
+2026-11-21 13:27:11,416 - Reserva confirmada exitosamente: Reserva #1 [CONFIRMADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $481950.0
+2026-11-21 13:27:11,416 - Error en la reserva: El servicio 'Sala de Conferencias' no está disponible.
+2026-11-21 13:27:11,417 - Error en la reserva: Error al procesar el costo de la reserva.
+2026-11-21 13:27:56,630 - Cliente creado exitosamente: ID: 1 | Nombre: Elier Lorenzo Estrella Rz | CC: 1086925057
+2026-11-21 13:27:56,630 - Cliente creado exitosamente: ID: 2 | Nombre: Oscar Martinez Ortiz | CC: 98195248
+2026-11-21 13:27:56,630 - Error en el cliente: El nombre y el documento no pueden estar vacíos.
+2026-11-21 13:27:56,631 - Servicio creado exitosamente: Sala: Sala de Conferencias | Tarifa: $150000/h | Disponible: True
+2026-11-21 13:27:56,631 - Servicios creados exitosamente: Equipo: Televisor | Tarifa: $500000/día | Disponible: True | Asesoría: Asesoría Legal | Tarifa: $200000/h | Disponible: True
+2026-11-21 13:27:56,631 - Error en el servicio: La tarifa del servicio debe ser un número positivo.
+2026-11-21 13:27:56,631 - Reserva confirmada exitosamente: Reserva #1 [CONFIRMADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $481950.0
+2026-11-21 13:27:56,631 - Error en la reserva: El servicio 'Sala de Conferencias' no está disponible.
+2026-11-21 13:27:56,631 - Error en la reserva: Error al procesar el costo de la reserva.
+2026-11-21 13:30:31,425 - Cliente creado exitosamente: ID: 1 | Nombre: Elier Lorenzo Estrella Rz | CC: 1086925057
+2026-11-21 13:30:31,426 - Cliente creado exitosamente: ID: 2 | Nombre: Oscar Martinez Ortiz | CC: 98195248
+2026-11-21 13:30:31,426 - Error en el cliente: El nombre y el documento no pueden estar vacíos.
+2026-11-21 13:30:31,426 - Servicio creado exitosamente: Sala: Sala de Conferencias | Tarifa: $150000/h | Disponible: True
+2026-11-21 13:30:31,426 - Servicios creados exitosamente: Equipo: Televisor | Tarifa: $500000/día | Disponible: True | Asesoría: Asesoría Legal | Tarifa: $200000/h | Disponible: True
+2026-11-21 13:30:31,426 - Error en el servicio: La tarifa del servicio debe ser un número positivo.
+2026-11-21 13:30:31,427 - Reserva confirmada exitosamente: Reserva #1 [CONFIRMADA] | Elier Lorenzo Estrella Rz -> Sala de Conferencias | Total: $481950.0
+2026-11-21 13:30:31,427 - Error en la reserva: El servicio 'Sala de Conferencias' no está disponible.
+2026-11-21 13:30:31,427 - Error en la reserva: Error al procesar el costo de la reserva.

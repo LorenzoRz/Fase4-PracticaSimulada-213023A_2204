@@ -168,7 +168,7 @@ def main():
         equipo1 = Equipo(2, "Televisor", 500000)
         asesoria1 = Asesoria(3, "Asesoría Legal", 200000)
         servicios.extend([equipo1, asesoria1])
-        print("5.",equipo1.mostrar_datos(),"|",asesoria1.mostrar_datos())
+        print(equipo1.mostrar_datos(),"|",asesoria1.mostrar_datos())
         logging.info(f"Servicios creados exitosamente: {equipo1.mostrar_datos()} | {asesoria1.mostrar_datos()}")
     except ErrorPersonalizado as e:
         print(f"Error al crear los servicios: {e}")
